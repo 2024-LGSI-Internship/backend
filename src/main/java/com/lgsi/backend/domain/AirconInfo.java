@@ -43,14 +43,14 @@ public class AirconInfo {
     private String set_wingangle;
 
     @Column(name = "current_temp")
-    private String current_temp;
+    private Float current_temp;
 
     @Column(name = "current_humidity")
-    private String current_humidity;
+    private Float current_humidity;
 
     @Builder
     public AirconInfo(UserInfo userInfo, Float set_temp, String set_mode, LocalDate set_date, LocalTime set_time,
-                      String set_windstrength, String set_wingangle, String current_temp, String current_humidity) {
+                      String set_windstrength, String set_wingangle, Float current_temp, Float current_humidity) {
         this.userInfo = userInfo;
         this.set_temp = set_temp;
         this.set_mode = set_mode;
@@ -64,7 +64,7 @@ public class AirconInfo {
 
 
     public void update(Float set_temp, String set_mode, LocalDate set_date, LocalTime set_time,
-                       String set_windstrength, String set_wingangle, String current_temp, String current_humidity) {
+                       String set_windstrength, String set_wingangle, Float current_temp, Float current_humidity) {
         this.set_temp = set_temp;
         this.set_mode = set_mode;
         this.set_date = set_date;
