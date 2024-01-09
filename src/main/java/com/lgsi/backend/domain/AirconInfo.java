@@ -24,55 +24,42 @@ public class AirconInfo {
     @JoinColumn(name = "userId")
     private UserInfo userInfo;
 
-    @Column(name = "set_temp", nullable = false)
-    private Float set_temp;
+    @Column(name = "setTemp", nullable = false)
+    private Float setTemp;
 
-    @Column(name = "set_mode", nullable = false)
-    private String set_mode;
+    @Column(name = "setMode", nullable = false)
+    private String setMode;
 
-    @Column(name = "set_date", nullable = false)
-    private LocalDate set_date;
+    @Column(name = "setDate", nullable = false)
+    private LocalDate setDate;
 
-    @Column(name = "set_time", nullable = false)
-    private LocalTime set_time;
+    @Column(name = "setTime", nullable = false)
+    private LocalTime setTime;
 
-    @Column(name = "set_windstrength", nullable = false)
-    private String set_windstrength;
+    @Column(name = "setWindstrength", nullable = false)
+    private String setWindstrength;
 
-    @Column(name = "set_wingangle", nullable = false)
-    private String set_wingangle;
+    @Column(name = "setWingangle", nullable = false)
+    private String setWingangle;
 
-    @Column(name = "current_temp")
-    private Float current_temp;
+    @Column(name = "currentTemp")
+    private Float currentTemp;
 
-    @Column(name = "current_humidity")
-    private Float current_humidity;
+    @Column(name = "currentHumidity")
+    private Float currentHumidity;
 
     @Builder
-    public AirconInfo(UserInfo userInfo, Float set_temp, String set_mode, LocalDate set_date, LocalTime set_time,
-                      String set_windstrength, String set_wingangle, Float current_temp, Float current_humidity) {
+    public AirconInfo(UserInfo userInfo, Float setTemp, String setMode, LocalDate setDate, LocalTime setTime,
+                      String setWindstrength, String setWingangle, Float currentTemp, Float currentHumidity) {
         this.userInfo = userInfo;
-        this.set_temp = set_temp;
-        this.set_mode = set_mode;
-        this.set_date = set_date;
-        this.set_time = set_time;
-        this.set_windstrength = set_windstrength;
-        this.set_wingangle = set_wingangle;
-        this.current_temp = current_temp;
-        this.current_humidity = current_humidity;
-    }
-
-
-    public void update(Float set_temp, String set_mode, LocalDate set_date, LocalTime set_time,
-                       String set_windstrength, String set_wingangle, Float current_temp, Float current_humidity) {
-        this.set_temp = set_temp;
-        this.set_mode = set_mode;
-        this.set_date = set_date;
-        this.set_time = set_time;
-        this.set_windstrength = set_windstrength;
-        this.set_wingangle = set_wingangle;
-        this.current_temp = current_temp;
-        this.current_humidity = current_humidity;
+        this.setTemp = setTemp;
+        this.setMode = setMode;
+        this.setDate = setDate;
+        this.setTime = setTime;
+        this.setWindstrength = setWindstrength;
+        this.setWingangle = setWingangle;
+        this.currentTemp = currentTemp;
+        this.currentHumidity = currentHumidity;
     }
 
 

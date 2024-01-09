@@ -18,12 +18,12 @@ public class UserInfo {
     private Long id;
 
     @Column(name = "user_name" , nullable = false)
-    private String user_name;
+    private String username;
 
     @Builder
-    public UserInfo(Long id, String user_name){
+    public UserInfo(Long id, String username){
         this.id = id;
-        this.user_name = user_name;
+        this.username = username;
     }
 
 }
