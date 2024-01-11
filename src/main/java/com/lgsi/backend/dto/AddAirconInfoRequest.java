@@ -13,25 +13,22 @@ import java.time.LocalTime;
 @Getter
 public class AddAirconInfoRequest {
 
-    private Float setTemp;
-    private String setMode;
-    private LocalDate setDate;
-    private LocalTime setTime;
-    private String setWindstrength;
-    private String setWingangle;
-    private Float currentTemp;
-    private Float currentHumidity;
+    private Float userTemp;
+    private String userMode;
+    private LocalDate userDate;
+    private LocalTime userTime;
+    private String userWindstrength;
+    private String userWingangle;
+
 
     public AirconInfo toEntity(){   //생성자를 사용한 객체 생성 (data transfer obj 를 entity로 만들어 줌)
         return AirconInfo.builder()
-                .setTemp(setTemp)
-                .setMode(setMode)
-                .setDate(setDate)
-                .setTime(setTime)
-                .setWindstrength(setWindstrength)
-                .setWingangle(setWingangle)
-                .currentTemp(currentTemp)
-                .currentHumidity(currentHumidity)
+                .userTemp(userTemp)
+                .userMode(userMode)
+                .userDate(userDate)
+                .userTime(userTime)
+                .userWindstrength(userWindstrength)
+                .userWingangle(userWingangle)
                 .build();
     }
 }

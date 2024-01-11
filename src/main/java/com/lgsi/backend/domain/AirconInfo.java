@@ -24,42 +24,35 @@ public class AirconInfo {
     @JoinColumn(name = "userId")
     private UserInfo userInfo;
 
-    @Column(name = "setTemp", nullable = false)
-    private Float setTemp;
+    @Column(name = "userTemp", nullable = false)
+    private Float userTemp;
 
-    @Column(name = "setMode", nullable = false)
-    private String setMode;
+    @Column(name = "userMode", nullable = false)
+    private String userMode;
 
-    @Column(name = "setDate", nullable = false)
-    private LocalDate setDate;
+    @Column(name = "userDate", nullable = false)
+    private LocalDate userDate;
 
-    @Column(name = "setTime", nullable = false)
-    private LocalTime setTime;
+    @Column(name = "userTime", nullable = false)
+    private LocalTime userTime;
 
-    @Column(name = "setWindstrength", nullable = false)
-    private String setWindstrength;
+    @Column(name = "userWindstrength", nullable = false)
+    private String userWindstrength;
 
-    @Column(name = "setWingangle", nullable = false)
-    private String setWingangle;
+    @Column(name = "userWingangle", nullable = false)
+    private String userWingangle;
 
-    @Column(name = "currentTemp")
-    private Float currentTemp;
-
-    @Column(name = "currentHumidity")
-    private Float currentHumidity;
 
     @Builder
-    public AirconInfo(UserInfo userInfo, Float setTemp, String setMode, LocalDate setDate, LocalTime setTime,
-                      String setWindstrength, String setWingangle, Float currentTemp, Float currentHumidity) {
+    public AirconInfo(UserInfo userInfo, Float userTemp, String userMode, LocalDate userDate, LocalTime userTime,
+                      String userWindstrength, String userWingangle) {
         this.userInfo = userInfo;
-        this.setTemp = setTemp;
-        this.setMode = setMode;
-        this.setDate = setDate;
-        this.setTime = setTime;
-        this.setWindstrength = setWindstrength;
-        this.setWingangle = setWingangle;
-        this.currentTemp = currentTemp;
-        this.currentHumidity = currentHumidity;
+        this.userTemp = userTemp;
+        this.userMode = userMode;
+        this.userDate = userDate;
+        this.userTime = userTime;
+        this.userWindstrength = userWindstrength;
+        this.userWingangle = userWingangle;
     }
 
 
